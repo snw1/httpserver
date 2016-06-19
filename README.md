@@ -34,4 +34,4 @@ Licensed under the [GPL](http://www.gnu.org/licenses/gpl.txt) license
 
 ##Authors
 
-Andrew Sheetov <[andrew.sheetov@gmail.com](mailto:andrew.sheetov@gmail.com)>
+Andrew Sheetov <[andrew.sheetov@gmail.com](mailto:andrew.sheetov@gmail.com)> 2014
