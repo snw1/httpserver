@@ -1,7 +1,7 @@
 #HTTPServer
 
 A simple Linux/Windows HTTP server, written for educational purposes.
-Written in pure C++11, no libraies or 3rd party code used.
+Written in pure C++11, no libraries or 3rd party code used.
 
 ##Main Features
 
