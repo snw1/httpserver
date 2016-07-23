@@ -10,7 +10,7 @@ Written in pure C++11, no libraries or 3rd party code used.
 * Up to 1000 concurrent requests support
 * Supported HTTP request types:
     * GET
-* Supported HTTP response codes:
+* Supported HTTP response types:
     * 200
     * 404
 * Supported MIME types:
