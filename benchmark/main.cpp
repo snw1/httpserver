@@ -92,6 +92,7 @@ void query(Stats &stats)
     catch (...)
     {
     }
+    //cout << resp.length() << endl;
     stats.add(resp.length() == RESPLEN);
 }
 

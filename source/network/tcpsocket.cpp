@@ -89,7 +89,7 @@ void TCPSocket::nonblock()
     unsigned long flags = 1;
     if (ioctlsocket(m_fd, FIONBIO, &flags) == SOCKET_ERROR)
         throw IOControlException(Utils::Strings::format("i/o control error: %s (%d)", strerror(errno), errno));
-#elif defined(__unix__)
+#elif defined(__unix__) || defined(__MACH__)
 #if defined(O_NONBLOCK)
     int flags = fcntl(m_fd, F_GETFL, 0);
     if (flags == SOCKET_ERROR)
@@ -160,7 +160,7 @@ void TCPSocket::connect(const string &ip, int port)
     addr.sin_port = htons(port);
     if (m_server)
     {
-#if defined(__unix__)
+#if defined(__unix__) || defined(__MACH__)
         int enable = 1;
         if (::setsockopt(m_fd, SOL_SOCKET, SO_REUSEADDR, &enable, sizeof(int)) == SOCKET_ERROR)
         {

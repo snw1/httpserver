@@ -1,13 +1,15 @@
 #HTTPServer
 
-A simple Linux/Windows HTTP server, written for educational purposes.
+A simple Linux/Windows/MacOS HTTP server, written for educational purposes.
 Written in pure C++11, no libraries or 3rd party code used.
 
 ##Main Features
 
-* Cross-platform: Linux and Windows supported
-* Multithreaded, single proceess
+* Cross-platform: Linux, Windows and MacOS supported
+* Multithreaded, single process
 * Up to 1000 concurrent requests support
+* Supported HTTP request types:
+    * GET
 * Supported HTTP response codes:
     * 200
     * 404

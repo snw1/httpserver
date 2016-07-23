@@ -33,7 +33,7 @@
 
 #if defined(_WIN32)
     #include <windows.h>
-#elif defined(__unix__)
+#elif defined(__unix__) || defined(__MACH__)
     #include <unistd.h>
     #include <signal.h>
     #include <sys/wait.h>
@@ -41,7 +41,6 @@
 #else
     #error Unsupported platform!
 #endif
-
 
 using namespace std;
 
@@ -52,7 +51,7 @@ enum ReturnCode
 
 int startServer(const Options &opt);
 
-#if defined(__unix__)
+#if defined(__unix__) || defined(__MACH__)
 
 void sighandler(int signum)
 {
@@ -122,7 +121,7 @@ int getOptions(int argc, char *argv[], Options &opt)
 {
     if (argc <= 1)
     {
-        cout << "HTTPServer v0.0, a simple Linux/Windows HTTP server" << endl;
+        cout << "HTTPServer v0.0, a simple Linux/Windows/MacOS HTTP server" << endl;
         cout << "Andrew Sheetov <andrew.sheetov@gmail.com> 2014" << endl;
         cout << "Licensed under the GPL <http://www.gnu.org/licenses/gpl.txt>" << endl;
         cout << endl;
@@ -130,7 +129,7 @@ int getOptions(int argc, char *argv[], Options &opt)
         cout << "-h <ip> server ip address" << endl;
         cout << "-p <port> server port number" << endl;
         cout << "-d <directory> server home directory" << endl;
-        cout << "[-z] run server as daemon (on Linux only)" << endl;
+        cout << "[-z] run server as daemon (doesn't work on Windows)" << endl;
         cout << endl;
         return ReturnCodeInfo;
     }
@@ -152,7 +151,7 @@ int main(int argc, char *argv[])
     int res = getOptions(argc, argv, opt);
     if (res != ReturnCodeOK)
         return res;
-#if defined(__unix__)
+#if defined(__unix__) || defined(__MACH__)
     if (opt.daemon())
         return startDaemon(opt);
 #endif

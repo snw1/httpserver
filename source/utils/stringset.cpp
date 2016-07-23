@@ -52,12 +52,14 @@ StringSet::~StringSet()
 StringSet &StringSet::operator+=(const string &str)
 {
     m_data.insert(str);
+    return *this;
 }
 
 StringSet &StringSet::operator+=(const initializer_list<string> &strs)
 {
     for (const string &str : strs)
         *this += str;
+    return *this;
 }
 
 bool StringSet::exists(const string &str) const

@@ -33,11 +33,11 @@ Exception::Exception(const string &msg)
 {
 }
 
-Exception::~Exception() throw()
+Exception::~Exception() noexcept
 {
 }
 
-const char *Exception::what() const throw()
+const char *Exception::what() const noexcept
 {
     return m_msg.c_str();
 }

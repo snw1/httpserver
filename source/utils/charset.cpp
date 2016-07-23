@@ -56,12 +56,14 @@ CharSet::~CharSet()
 CharSet &CharSet::operator+=(char ch)
 {
     m_data[static_cast<unsigned char>(ch)] = 1;
+    return *this;
 }
 
 CharSet &CharSet::operator+=(const string &str)
 {
     for (char ch : str)
         *this += ch;
+    return *this;
 }
 
 bool CharSet::exists(char ch) const

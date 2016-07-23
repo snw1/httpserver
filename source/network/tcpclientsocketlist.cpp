@@ -77,7 +77,7 @@ void TCPClientSocketList::selectWriteable()
         FD_SET(socket.fd(), &m_fdset);
         maxfd = max(maxfd, socket.fd());
     }
-    if (select(maxfd + 1, &m_fdset, 0, 0, 0) == SOCKET_ERROR)
+    if (select(maxfd + 1, 0, &m_fdset, 0, 0) == SOCKET_ERROR)
         throw SocketSelectException(Utils::Strings::format("error selecting sockets: %s (%d)", strerror(errno), errno));
 }
 

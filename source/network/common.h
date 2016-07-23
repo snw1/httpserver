@@ -28,7 +28,7 @@
 
 #if defined(_WIN32)
     #include <network/wsa.h>
-#elif defined(__unix__)
+#elif defined(__unix__) || defined(__MACH__)
     #include <netdb.h>
     #include <fcntl.h>
     #include <unistd.h>

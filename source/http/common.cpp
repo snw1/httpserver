@@ -105,7 +105,7 @@ string dirToHTML(string relpath, const string &path)
     html += "<html>\n";
 #if defined(_WIN32)
     html += "<head><meta http-equiv='Content-Type' content='text/html; charset=windows-1251'></head>\n";
-#elif defined(__unix__)
+#elif defined(__unix__) || defined(__MACH__)
     html += "<head><meta http-equiv='Content-Type' content='text/html; charset=utf-8'></head>\n";
 #else
     #error Unsupported platform!

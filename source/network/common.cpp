@@ -43,7 +43,7 @@ void closeTCPSocket(SOCKET &socket)
 #if defined(_WIN32)
     ::shutdown(socket, SD_BOTH);
     ::closesocket(socket);
-#elif defined(__unix__)
+#elif defined(__unix__) || defined(__MACH__)
     ::shutdown(socket, SHUT_RDWR);
     ::close(socket);
 #else
