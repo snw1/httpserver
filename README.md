@@ -1,9 +1,9 @@
-#HTTPServer
+# HTTPServer
 
 A simple Linux/Windows/MacOS HTTP server, written for educational purposes.
 Written in pure C++11, no libraries or 3rd party code used.
 
-##Main Features
+## Main Features
 
 * Cross-platform: Linux, Windows and MacOS supported
 * Multithreaded, single process
@@ -30,10 +30,10 @@ Written in pure C++11, no libraries or 3rd party code used.
     * 10K local queries per second in a single thread
     * 22K local queries per second in multiple threads
 
-##Copyright
+## Copyright
 
 Licensed under the [GPL](http://www.gnu.org/licenses/gpl.txt) license
 
-##Authors
+## Authors
 
 Andrew Sheetov <[andrew.sheetov@gmail.com](mailto:andrew.sheetov@gmail.com)> 2014
