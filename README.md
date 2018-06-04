@@ -11,8 +11,8 @@ Written in pure C++11, no libraries or 3rd party code used.
 * Supported HTTP request types:
     * GET
 * Supported HTTP response types:
-    * 200
-    * 404
+    * 200 (OK)
+    * 404 (Not Found)
 * Supported MIME types:
     * image/bmp
     * image/jpeg
