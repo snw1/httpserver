@@ -26,7 +26,7 @@ Written in pure C++11, no libraries or 3rd party code used.
     * application/octet-stream
 * Directory listing supported
 * Support of non alphanumeric URIs
-* High performance:
+* Performance:
     * 10K local queries per second in a single thread
     * 22K local queries per second in multiple threads
 
